@@ -1,0 +1,97 @@
+@import url(variables.css);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--color-primary);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-auto-rows: .5fr;
+    grid-gap: 8px;
+    grid-template-areas: 
+        "menu menu menu menu menu menu menu menu menu menu menu menu"
+        "notificate notificate notificate notificate sales sales sales sales sales sales balance balance "
+        "notificate notificate notificate notificate sales sales sales sales sales sales balance balance"
+        "week week week week sales sales sales sales sales sales balance balance"
+        "week week week week sales sales sales sales sales sales devs devs"
+        "week week week week sales sales sales sales sales sales devs devs"
+        "prod prod prod prod prod time time time time time time time"
+        "prod prod prod prod prod time time time time time time time"
+        "prod prod prod prod prod time time time time time time time"
+        ;
+    width: 800px;
+    height: 600px;
+    background: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    margin: 15px auto;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.container div{
+    border-radius: 5px;
+    background: var(--color-secundary);
+}
+
+.item_1{
+    background: red;
+    grid-area: menu;
+}
+.item_2{
+    background: blue;
+    grid-area: notificate;
+}
+
+.item_3{
+    background: orange;
+    grid-area: sales;
+}
+
+.item_4{
+    background: violet;
+    grid-area: balance;
+}
+
+.item_5{
+    background: salmon;
+    grid-area: week;
+}
+
+.item_6{
+    background: green;
+    grid-area: devs;
+}
+
+.item_7{
+    background: purple;
+    grid-area: prod;
+}
+
+.item_8{
+    background: gray;
+    grid-area: time;
+}
+
+@media (width < 600px){
+    .container{
+        width: 100%;
+        margin: 0;
+        padding: 0 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "menu menu"
+        "notificate notificate"
+        "sales balance"
+        "week week"
+        "devs devs"
+        "prod prod"
+        "time time"
+        ;
+    }
+}
