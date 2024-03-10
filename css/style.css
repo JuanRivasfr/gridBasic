@@ -1,94 +1,325 @@
 @import url(variables.css);
+
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
+    font-family: sans-serif;
     box-sizing: border-box;
-    gap: 0;
 }
+
 body{
-    background-color: var(--color-primary);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: whitesmoke;
+    background: var(--color-primary);
 }
 
 .container{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(9, 1fr);
-    grid-template-areas: 
-    "header header header header header"
-    "supizq supizq supmed supmed supder"
-    "supizq supizq supmed supmed supder"
-    "medizq medizq supmed supmed supder"
-    "medizq medizq supmed supmed medder"
-    "medizq medizq supmed supmed medder"
-    "bajizq bajizq bajder bajder bajder"
-    "bajizq bajizq bajder bajder bajder"
-    "bajizq bajizq bajder bajder bajder"
+    grid-gap: 8px;
+    grid-template-areas: "menu menu menu menu menu menu menu menu menu menu menu menu"
+                        "notification notification notification notification sales sales sales sales sales sales balance balance"
+                        "notification notification notification notification sales sales sales sales sales sales balance balance"
+                        "week week week week sales sales sales sales sales sales balance balance"
+                        "week week week week sales sales sales sales sales sales devs devs"
+                        "week week week week sales sales sales sales sales sales devs devs"
+                        "product product product product product timeLine timeLine timeLine timeLine timeLine timeLine timeLine"
+                        "product product product product product timeLine timeLine timeLine timeLine timeLine timeLine timeLine"
+                        "product product product product product timeLine timeLine timeLine timeLine timeLine timeLine timeLine"
     ;
-    width: 60%;
-    height: 80%;
-    text-align: center;
-    background-color: whitesmoke;
-    grid-gap: 1vw;
+    grid-auto-rows: 1fr;
+    width: 800px;
+    height: 600px;
+    margin: 15px auto;
+    background: var(--color-primary);
 }
 
-.container  div{
-    border-radius: 15px;
-    background-color: white;
-    box-shadow: 10px 15px 15px rgba(0, 0, 0, .125)
+.container div{
+    background: var();
+    border-radius: 5px;
 }
 
-.header{
-    grid-area: header;
+.item_1{
+    display: flex;
+    grid-area: menu;
 }
 
-.main__supizq{
-    grid-area: supizq;
+.Busqueda{
+    background: var(--color-secundary);
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 59.55px;
+    align-items: center;
 }
 
-.main__supmed{
-    grid-area: supmed;
+.Busqueda ul{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
 }
 
-.main__supder{
-    grid-area: supder;
+.Busqueda ul li{
+    display: flex;
+    align-items: center;
 }
 
-.main__medizq{
-    grid-area: medizq;
+.Busqueda input{    
+    position: relative;
+    border-radius: 5px;
+    background-color: var(--color-primary);
+    border: 0;
+    padding: 5px;
+    width: 130px;
+    height: 40px;
 }
 
-.main__medder{
-    grid-area: medder;
+.Busqueda i{
+    position: absolute;
+    transform: translateX(700%);
 }
 
-.main__bajizq{
-    grid-area: bajizq;
+.Usuario{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    background: linear-gradient(90deg, var(--color-tertiary), var(--color-quartetiary))
 }
 
-.main__bajder{
-    grid-area: bajder;
+.notis{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;   
+    font-size: 2vw;
 }
 
-@media (width < 600px){
+.notis li{
+    margin-left: 7px;
+}
+
+.Datos{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.Datos li{
+    list-style: none;
+    font-size: 15px;
+}
+
+.Datos li p{
+    font-size: 13px;
+}
+
+.user{
+    font-size: 2vw;
+    list-style: none;
+    margin: 2vw;
+}
+
+.item_2{
+    background: var(--color-tertiary);
+    grid-area: notification;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.arriba{
+    display: flex;
+    margin: 12px;
+}
+
+.arriba p{
+    font-size: 15px;
+    width: 90%;
+    
+}
+.arriba i{
+    width: 10%;
+    font-size: 20px;
+}
+
+.info h4{
+    width: 100%;
+    margin-left: 12px;
+}
+
+.item_3{
+    padding: 16px;
+    background: var(--color-secundary);
+    grid-area: sales;
+}
+
+.contenido h6{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.contenido strong{
+    color: var(--color-quartetiary)
+}
+
+.años{
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+.item_4{
+    background: var(--color-secundary);
+    grid-area: balance;
+}
+
+.item_4 div{
+    margin: 6px;
+    padding: 10px;
+    height: 30%;
+}
+
+.caja_2{
+    padding: 10px;
+    background: var(--color-quintuple);
+    box-shadow: var(--color-shadows) 
+}
+
+.item_4 p{
+    font-size: 10px;
+}
+
+.item_5{
+    padding-left: 15px;
+    background: var(--color-secundary);
+    grid-area: week;
+}
+
+.item_5 img{
+    width: 100%;
+    height: 69%;
+}
+
+.item_6{
+    background: var(--color-quartetiary);
+    grid-area: devs;
+}
+
+.info_2{
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.info_2 p{
+    font-size: 13px;
+}
+
+.info_2 h4{
+    font-size: 16px;
+}
+
+.info_2 button{
+    margin-top: 5px;
+    border: none;
+}
+
+.info_2 button p{
+    width: 61px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.item_7{
+    background: var(--color-secundary);
+    grid-area: product;
+}
+
+.info_3{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.info_3 h2{
+    padding: 5px;
+}
+
+.info_3 p{
+    padding: 5px;
+}
+
+
+.botones{
+    display: flex;  
+}
+
+.botones button{
+    margin: 5px;
+}
+
+.boton_1{
+    background: var(--color-Sextuple);
+    border: none;
+    border-radius: 5px;
+    width: 75px;
+    height: 35px;
+}
+
+.boton_2{
+    background: var(--color-quartetiary);
+    border: none;
+    border-radius: 5px;
+    width: 75px;
+    height: 35px;
+}
+
+
+.item_8{
+    background: var(--color-secundary);
+    grid-area: timeLine;
+}
+
+.item_8 img{
+    height: 100%;
+    width: 100%;
+}
+
+@media (width < 800px) {
     .container{
         width: 100%;
         margin: 0;
-        padding: 0 10px;
+        padding: 2px 10px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
-        "menu menu"
-        "notificate notificate"
-        "sales balance"
-        "week week"
-        "devs devs"
-        "prod prod"
-        "time time"
-        ;
+                        "menu menu"
+                        "sales balance"
+                        "week week"
+                        "devs devs"
+                        "product product"
+                        "notification notification"
+                        "timeLine timeLine"
+                        ;
+    }
+
+    .container div{
+        border-radius: 0px;
     }
 }

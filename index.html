@@ -3,29 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>GridBasic</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="container"> 
-        <div class="header">
-            <div class="header__izq">
-                <nav>
-                    <ul>
-                        <li><a href="#">overview</a></li>
-                        <li><a href="#">reports</a></li>
-                        <li></li>
-                    </ul>
-                </nav>
+    <div class="container">
+        <div class="item_1">
+            <div class="Busqueda">
+                <ul>
+                    <li><strong>Overview</strong></li>
+                    <li>Reports</li>
+                    <li><input type="search" placeholder="Search" /><i class='bx bx-search'></i></li>
+                </ul>
+            </div>
+            <div class="Usuario">
+                <ul class="notis">
+                    <li><i class='bx bxs-envelope'></i></li>
+                    <li><i class='bx bxs-bell' ></i></li>
+                </ul>
+
+                <ul class="Datos">
+                    <li> <strong>Thomas Gepsan</strong></li>
+                    <li><p>Super Admin</p></li>
+                </ul>
+                <ul class="user">
+                    <li><i class='bx bxs-user' ></i></li>
+                </ul>
             </div>
         </div>
-        <div class="main__supizq">Superior izquierda</div>
-        <div class="main__supmed">Superior medio</div>
-        <div class="main__supder">Superior derecho</div>
-        <div class="main__medizq">Medio izquierdo</div>
-        <div class="main__medder">Medio derecho</div>
-        <div class="main__bajizq">Bajo izquierda</div>
-        <div class="main__bajder">Bajo derecha</div>
+        <div class="item_2">
+            <div class="info">
+                <div class="arriba">
+                    <p>12:30 - 15:45</p>
+                    <i class='bx bx-dots-horizontal-rounded'></i>
+                </div>
+                <h4><strong>New project Discussion</strong></h4>
+            </div>
+
+        </div>
+        <div class="item_3">
+            <div class="contenido">
+                <h6>Sales Data</h6>
+                <div class="años">
+                    <h3>Yearly</h3>
+                </div>
+                <h1>$38.96</h1>
+                <p><strong>+2.75</strong></p>
+                <img src="storage/img/Caja_3.png" />
+            </div>
+        </div>
+        <div class="item_4">
+            <div class="caja_1">
+                <p>Today's Earning</p>
+                <h2><strong>$2890</strong></h2>
+            </div>
+            <div class="caja_2">
+                <p>Today's Brokings</p>
+                <h2><strong>24</strong></h2>
+            </div>
+            <div class="caja_3">
+                <p>Total Balance</p>
+                <h2><strong>2M</strong></h2>
+            </div>
+        </div>
+        <div class="item_5">
+            <h3>Revenue This Week</h3>
+            <h1><strong>$84,670</strong></h1>
+            <img src="storage/img/Caja_5.png">
+        </div>
+        <div class="item_6">
+            <div class="info_2">
+                <p>21:20 - 23:30</p>
+                <h4><strong>Devs Meeting</strong></h4>
+                <button><p>15 Min left</p></button>
+            </div>
+        </div>
+        <div class="item_7">
+            <div class="info_3">
+                <div class="caja_4">
+                    <h2><strong>Product Design</strong></h2>
+                    <p>11:30 - 12:25</p>
+                </div>
+                <div class="botones">
+                    <button class="boton_1">Coder</button>
+                    <button class="boton_2">Meeting</button>
+                </div>
+            </div>
+        </div>
+        <div class="item_8">
+            <img src="storage/img/Caja_8.png" />    
+        </div>
     </div>
 </body>
 </html>
